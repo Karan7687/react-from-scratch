@@ -41,3 +41,6 @@ const root = createRoot(container); //function call and pass container with html
 
 // Render the App component inside the root element
 root.render(<App />);
+ 
+ 
+
