@@ -5,9 +5,9 @@ const GoalList = (props) => {
   console.log(props.course);
   return (
     <ul className="list">
-      {props.course.map((goal) => {
+      {/* {props.course.map((goal) => {
         return <li key={goal.id}>{goal.text}</li>;
-      })}
+      })} */}
     </ul>
   );
 };
