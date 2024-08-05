@@ -15,8 +15,8 @@ const App = () => {
   return (
     <div className="course-goals">
       <h1>COURSE</h1>
-      <NewGoal/>
-      <GoalList course={arr}/>
+      <NewGoal />
+      <GoalList arrProp={arr} />
     </div>
   );
 };
