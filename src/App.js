@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import GoalList from "./components/GoalList/GoalList";
 import NewGoal from "./components/NewGoal/NewGoal";
+import UpdateList from "./components/UpdateList/UpdateList";
+
 import "./App.css";
 
 const App = () => {
@@ -17,13 +19,22 @@ const App = () => {
     //array is created to pass as props from app to GoalList
   ];
 
+  const updateArr = [
+    { id: "1", text: "array passed successfully" },
+    { id: "2", text: "array Accessed successfully" },
+    
+  ];
+
   const addGoalHandler = (NewGoal) => {};
 
   return (
     <div className="course-goals">
       <h1>COURSE</h1>
       <NewGoal onAddGoal={addGoalHandler} />
+
       <GoalList arrProp={arr} />
+      <UpdateList arr={updateArr}/>
+
     </div>
   );
 };
