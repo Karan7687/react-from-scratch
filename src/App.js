@@ -15,8 +15,10 @@ const App = () => {
     //array is created to pass as props from app to GoalList
   ];
 
-
-  const addGoalHandler = (NewGoal) => {};
+  const addGoalHandler = (NewGoal) => {
+    arr.push(NewGoal);
+    console.log(arr);
+  };
 
   return (
     <div className="course-goals">
@@ -24,7 +26,6 @@ const App = () => {
       <NewGoal onAddGoal={addGoalHandler} />
 
       <GoalList arrProp={arr} />
-
     </div>
   );
 };

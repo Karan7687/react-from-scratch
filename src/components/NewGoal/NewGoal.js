@@ -3,7 +3,7 @@ import "./NewGoal.css";
 
 import GoalList from "../GoalList/GoalList";
 
-const NewGoal = () => {
+const NewGoal = (props) => {
   const addGoalHandler = (event) => {
     event.preventDefault();
     // console.log("Link navigation prevented!");
@@ -13,7 +13,7 @@ const NewGoal = () => {
       text: "My dummy goal",
     };
 
-    console.log(newGoal);
+    props.onAddGoal(newGoal);
   };
 
   return (
