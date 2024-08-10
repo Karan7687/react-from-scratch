@@ -5,7 +5,7 @@ import NewGoal from "./components/NewGoal/NewGoal";
 import "./App.css";
 
 const App = () => {
-  const arr = [
+  const [arr, setCourseGoals] = useState([
     { id: "course1", text: "React Native" },
     { id: "course2", text: "Next JS" },
     { id: "course3", text: "GO LANG" },
@@ -13,18 +13,20 @@ const App = () => {
     { id: "course8", text: "Node" },
     { id: "course9", text: "Django" },
     //array is created to pass as props from app to GoalList
-  ];
+  ]);
 
   const addGoalHandler = (NewGoal) => {
-    arr.push(NewGoal);
-    console.log(arr);
+    // arr.push(NewGoal);
+    // console.log(arr);
+
+    setCourseGoals(arr.concat(NewGoal));
   };
 
   return (
     <div className="course-goals">
       <h1>COURSE</h1>
-      <NewGoal onAddGoal={addGoalHandler} />
 
+      <NewGoal onAddGoal={addGoalHandler} />
       <GoalList arrProp={arr} />
     </div>
   );
