@@ -1,8 +1,11 @@
 import React from "react";
 import "./NewGoal.css";
+
+import GoalList from "../GoalList/GoalList";
+
 const NewGoal = () => {
   const addGoalHandler = (event) => {
-    // event.preventDefault();
+    event.preventDefault();
     // console.log("Link navigation prevented!");
 
     const newGoal = {
@@ -15,7 +18,7 @@ const NewGoal = () => {
 
   return (
     <form className="new-goal" onSubmit={addGoalHandler}>
-      <input type="text"></input>
+      <input type="text" />
       <button type="submit">Add Goal</button>
     </form>
   );
